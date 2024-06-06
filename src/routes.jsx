@@ -1,0 +1,19 @@
+import App from "./App";
+import Product from "./Product";
+
+const routes = [
+  {
+    path: "/",
+    element: <App />,
+  },
+  {
+    path: "/:name",
+    element: <App />,
+  },
+  {
+    path: "/products/:id",
+    element: <App />,
+  },
+];
+
+export default routes;
