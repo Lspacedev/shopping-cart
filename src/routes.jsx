@@ -1,5 +1,4 @@
 import App from "./App";
-import Product from "./Product";
 
 const routes = [
   {

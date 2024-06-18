@@ -1,13 +1,13 @@
 import { useEffect, useState } from "react";
-import useLocalStorage from "./useLocalStorage";
-
-import Navigation from "./Navigation";
-
 import { useParams } from "react-router-dom";
-import Home from "./Home";
-import Products from "./Products";
-import Checkout from "./Checkout";
-import Product from "./Product";
+import useLocalStorage from "./components/useLocalStorage";
+
+import Navigation from "./components/Navigation";
+import Home from "./components/Home";
+import Products from "./components/Products";
+import Checkout from "./components/Checkout";
+import Product from "./components/Product";
+import Footer from "./components/Footer";
 
 import "./App.css";
 
@@ -27,19 +27,15 @@ function App() {
 
   /* Add items to cart */
 
-  function addToCart(id) {
+  function addToCart(id, pric) {
     setCartCount((prev) => {
       let exists = prev.filter((obj) => obj.id == id);
 
       console.log(exists);
       return prev.length === 0 || exists.length == 0
-        ? [...prev, { id: id, value: 1 }]
+        ? [...prev, { id: id, value: 1, price: pric }]
         : prev;
     });
-
-    /*if (cartCount.length == 0 /*|| present.length == 0) {
-      setCartCount((prev) => [...prev, { id: id, value: 1 }]);
-    }*/
   }
 
   /* Update number of items in cart */
@@ -56,7 +52,7 @@ function App() {
     setCartCount((prev) => prev.filter((obj) => obj.id != id));
   }
   return (
-    <div>
+    <main className="app-container">
       <Navigation count={count} />
 
       {name === "products" ? (
@@ -72,7 +68,8 @@ function App() {
       ) : (
         <Home />
       )}
-    </div>
+      <Footer />
+    </main>
   );
 }
 

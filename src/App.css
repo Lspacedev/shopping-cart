@@ -3,28 +3,32 @@
 }*/
 
 body {
-  padding: 0;
   margin: 0;
-}
-
-.container {
   padding: 0;
-  margin: 0;
-
-  height: 100vh;
+  background-color: gray;
 }
 
-.product-section {
-  height: 100%;
+.products-section {
+  background-color: white;
+  width: 100vw;
 }
-.product-section h1 {
+
+.products-section h1 {
   text-align: center;
+}
+
+.search {
+  padding: 20px;
 }
 
 .searchbar {
   display: block;
   margin: auto;
+  padding: 10px 100px;
+  border: 1px solid gray;
+  border-radius: 15px 15px;
 }
+
 .products-container {
   display: flex;
   justify-content: space-evenly;
@@ -36,15 +40,91 @@ body {
   justify-content: center;
   flex-wrap: wrap;
   flex: 4;
-  gap: 15px;
+  gap: 50px;
   padding: 25px;
+
+  background-color: whitesmoke;
+  border-left: 2px solid hsl(13, 100%, 72%);
 }
 
 .product {
-  flex: 15%;
+  flex: 25%;
+  height: 400px;
+  width: 300px;
+  max-width: 250px;
+
+  padding: 15px;
+
+  background-color: white;
+}
+
+.product-info {
+  text-align: center;
+  font-size: 0.8rem;
+}
+
+.product-image {
+  width: 150px;
   height: 200px;
-  max-width: 200px;
-  border: 1px solid black;
+}
+
+.product-info button {
+  padding: 20px 40px;
+  margin-top: 10px;
+  border: none;
+  background-color: black;
+  color: white;
+}
+
+.product-info button:hover {
+  background-color: hsl(13, 100%, 72%);
+  color: whitesmoke;
+}
+
+.load-error {
+  padding: 250px 0px;
+  margin: 0;
+  text-align: center;
+  background-color: #ffffff;
+
+  font-size: 1.2rem;
+}
+
+.product-page-container {
+  display: flex;
+  justify-content: space-around;
+  gap: 20px;
+
+  width: 100vw;
+
+  padding: 50px 0px;
+  background-color: white;
+}
+
+.product-page-container div {
+  margin: 0;
+}
+
+.image {
+  display: flex;
+  align-items: center;
+  width: 40%;
+  max-height: 350px;
+}
+
+.product-page-image {
+  width: 100%;
+  height: 100%;
+}
+
+.product-details {
+  text-align: center;
+  padding: 0px 25px;
+  max-width: 50%;
+}
+
+.product-details div {
+  font-size: 1rem;
   padding: 15px;
 }
 
@@ -64,13 +144,26 @@ body {
 }
 
 .submenu ul li {
-  padding: 25px 120px;
+  padding: 25px 60px;
   text-align: center;
+}
+
+.nav-container {
+  position: relative;
+  z-index: 1;
+
+  background-color: white;
+  box-shadow: 0px 2px 5px -5px black;
+
+  width: 100vw;
 }
 
 nav {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
+
+  font-size: 1.3rem;
+  padding: 50px;
 }
 
 nav ul {
@@ -79,9 +172,395 @@ nav ul {
   gap: 25px;
 
   list-style: none;
+
+  margin: 0;
 }
 
 nav ul li a {
   text-decoration: none;
   color: black;
+}
+
+.logo {
+  align-self: center;
+  font-size: 1.9rem;
+  font-weight: 700;
+  font-family: Impact, "Arial Narrow Bold", sans-serif;
+}
+
+.cart-count {
+  position: absolute;
+}
+
+.count {
+  position: relative;
+  margin-right: -55px;
+  top: -42px;
+
+  padding: 0px 4px;
+
+  text-align: center;
+
+  border-radius: 50%;
+  box-sizing: content-box;
+}
+
+.checkout-section {
+  min-height: 450px;
+  width: 100vw;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  background-color: white;
+}
+
+.empty-cart {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.empty-message {
+  font-size: 3rem;
+}
+
+.empty-icon {
+  font-size: 2.5rem;
+}
+
+.empty-cart-button {
+  padding: 15px 32px;
+
+  background-color: black;
+  color: white;
+
+  border: none;
+}
+
+.empty-cart-button:hover {
+  background-color: hsl(13, 100%, 72%);
+}
+
+.checkout-list {
+  list-style: none;
+}
+
+.card {
+  display: flex;
+  justify-content: center;
+
+  padding: 25px;
+  margin: 25px 100px;
+
+  border-top: 1px solid lightgray;
+  border-bottom: 1px solid lightgray;
+}
+
+.card-details {
+  padding: 10px 45px;
+  font-size: 1.1rem;
+}
+
+.card-buttons {
+  align-self: center;
+}
+
+.card-buttons button {
+  padding: 10px 25px;
+  margin: 5px;
+  border: none;
+
+  background-color: lightgray;
+}
+
+.card-img {
+  width: 300px;
+  height: 200px;
+}
+
+.submit-delete button {
+  padding: 15px 35px;
+  border: none;
+  color: white;
+  background-color: black;
+  margin: 5px;
+}
+
+.update-count-buttons {
+  display: flex;
+  justify-content: center;
+}
+
+.update-count-buttons button {
+  background-color: white;
+  font-size: 1.6rem;
+}
+
+.update-count-buttons p {
+  padding: 10px 25px;
+  background-color: whitesmoke;
+}
+.home-section {
+  width: 100vw;
+  background-color: white;
+}
+
+.showcase {
+  height: 500px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: whitesmoke;
+
+  box-shadow: 0px 2px 3px -3px black;
+}
+
+.showcase-title {
+  margin: 25px;
+  font-size: 2.5rem;
+  text-align: center;
+}
+
+.showcase button {
+  padding: 25px 45px;
+  font-size: 1.2rem;
+  border: none;
+  background-color: black;
+  color: white;
+}
+.showcase button:hover {
+  background-color: rgb(229, 229, 229);
+  color: black;
+}
+
+.shop-categories {
+  padding: 50px 0px;
+
+  box-shadow: 0px 2px 3px -3px black;
+}
+
+.shop-categories-title {
+  text-align: center;
+  font-size: 1.3rem;
+
+  margin: 25px 0px;
+}
+
+.category-cards {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.category-cards div {
+  padding: 50px;
+  border: 1px solid black;
+  text-align: center;
+
+  transition: transform 0.3s ease-in-out;
+}
+
+.category-cards div:hover {
+  transform: scale(1.1);
+}
+
+.newsletter {
+  display: flex;
+  justify-content: center;
+  padding: 100px;
+}
+
+.newsletter-container {
+  background-color: black;
+  color: white;
+  text-align: center;
+
+  padding: 20px;
+  max-width: 350px;
+}
+
+.subscribe {
+  font-size: 1.3rem;
+}
+
+.newsletter-input input[type="text"] {
+  padding: 7px 30px;
+  border: none;
+}
+
+.newsletter-input input[type="submit"] {
+  padding: 7px 20px;
+  border: none;
+  background-color: whitesmoke;
+}
+
+/* Footer */
+footer {
+  height: 400px;
+  width: 100vw;
+  color: white;
+  background-color: black;
+  padding-top: 75px;
+}
+
+.footer-info {
+  display: flex;
+  justify-content: space-evenly;
+
+  margin-bottom: 100px;
+}
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+.attribution > a {
+  text-decoration: none;
+
+  color: hsl(13, 100%, 72%);
+}
+
+.attribution > a:hover {
+  color: hsl(353, 100%, 62%);
+}
+
+/* Product Section - Footer*/
+.product-links {
+  display: flex;
+  flex-direction: column;
+
+  gap: 25px;
+}
+
+.product-h {
+  margin-bottom: 45px;
+
+  font-weight: 600;
+}
+
+.product-links > a {
+  color: white;
+
+  text-decoration: none;
+}
+
+.product-links > a:hover {
+  text-decoration: underline;
+}
+
+/* Company Section - Footer */
+.company-links {
+  display: flex;
+  flex-direction: column;
+
+  gap: 25px;
+}
+
+.company-h {
+  margin-bottom: 45px;
+
+  font-weight: 600;
+}
+
+.company-links > a {
+  color: white;
+
+  text-decoration: none;
+}
+
+.company-links > a:hover {
+  text-decoration: underline;
+}
+
+/* Connect Section - Footer */
+.connect-links {
+  display: flex;
+  flex-direction: column;
+
+  gap: 25px;
+}
+
+.connect-h {
+  margin-bottom: 45px;
+
+  font-weight: 600;
+}
+
+.connect-links > a {
+  color: white;
+
+  text-decoration: none;
+}
+
+.connect-links > a:hover {
+  text-decoration: underline;
+}
+
+@media (max-width: 650px) {
+  /* Home */
+  .category-cards {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .products-container {
+    display: flex;
+    flex-direction: column;
+  }
+  .submenu {
+    margin: 5px 0px;
+  }
+  .submenu ul {
+    display: flex;
+    justify-content: space-evenly;
+    gap: 15px;
+
+    background-color: white;
+  }
+
+  .submenu ul li {
+    padding: 0;
+    margin: 0;
+  }
+
+  .searchbar {
+    padding: 10px 15px;
+  }
+}
+
+@media (max-width: 760px) {
+  .card {
+    flex-direction: column;
+    margin: 0;
+    padding: 0;
+  }
+
+  .card-img {
+    max-width: 200px;
+    max-height: 150px;
+  }
+
+  .checkout-section {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 560px) {
+  .newsletter-input input[type="submit"] {
+    padding: 7px 98px;
+  }
+  .product-page-container {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+@media (max-width: 450px) {
+  /* Nav */
+  nav {
+    flex-direction: column;
+    gap: 10px;
+  }
 }
