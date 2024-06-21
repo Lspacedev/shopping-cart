@@ -27,7 +27,7 @@ function Checkout({ cartCount, handleCartCount, delCard }) {
           </ul>
           <div>
             <h3>Subtotal: </h3>
-            <p>${sum}</p>
+            <p>${Math.round(sum)}</p>
           </div>
         </div>
       ) : (

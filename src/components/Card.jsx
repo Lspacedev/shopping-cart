@@ -40,7 +40,7 @@ function Card({ id, initial, handleCartCount, delCard }) {
   if (error) return <p>A network error was encountered</p>;
 
   return (
-    <div className="card">
+    <div data-testid="card" className="card">
       <div>
         <img src={src} className="card-img" />
       </div>
@@ -59,7 +59,7 @@ function Card({ id, initial, handleCartCount, delCard }) {
             >
               +
             </button>
-            <p>{num}</p>
+            <p data-testid="counter">{num}</p>
             <button
               onClick={() => {
                 handleNum({ sign: "-", val: 1 });

@@ -425,6 +425,12 @@ footer {
   color: hsl(353, 100%, 62%);
 }
 
+.footer-logo {
+  font-size: 1.9rem;
+  font-weight: 700;
+  font-family: Impact, "Arial Narrow Bold", sans-serif;
+}
+
 /* Product Section - Footer*/
 .product-links {
   display: flex;

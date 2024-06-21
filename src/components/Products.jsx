@@ -5,24 +5,6 @@ import ProductCard from "./ProductCard";
 function Products({ addToCart, delCard }) {
   let arr = [];
 
-  /*let initialObj = [
-    { id: 11, added: false },
-    { id: 12, added: false },
-    { id: 13, added: false },
-    { id: 14, added: false },
-    { id: 5, added: false },
-    { id: 6, added: false },
-    { id: 7, added: false },
-    { id: 8, added: false },
-    { id: 1, added: false },
-    { id: 2, added: false },
-    { id: 3, added: false },
-    { id: 4, added: false },
-    { id: 15, added: false },
-    { id: 16, added: false },
-    { id: 17, added: false },
-    { id: 18, added: false },
-  ];*/
   const [prodArr, setProdArr] = useState(arr);
 
   const info = [

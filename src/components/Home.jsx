@@ -4,14 +4,17 @@ import {
   RiMenLine,
   RiWomenFill,
 } from "@remixicon/react";
+import { Link } from "react-router-dom";
 
 function Home() {
   return (
-    <section className="home-section">
+    <section data-testid="home-section" className="home-section">
       <div className="showcase">
         <div className="showcase-title">Your number one ecommerce shop</div>
 
-        <button>Shop Now</button>
+        <Link to="/products">
+          <button>Shop Now</button>
+        </Link>
       </div>
 
       <div className="shop-categories">
